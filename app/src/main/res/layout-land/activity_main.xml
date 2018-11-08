@@ -46,20 +46,23 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/buttonSCI"
-                    style="@style/AppTheme.Button"
+                    android:id="@+id/buttonSTD"
+                    style="@style/AppTheme.Button.Landscape"
                     android:textAllCaps="true"
-                    android:layout_weight="2"
-                    android:text="@string/sciCal" />
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="@string/stdCal" />
 
                 <TextView
                     android:layout_height="match_parent"
                     android:layout_width="0dp"
-                    android:layout_weight="2"/>
+                    android:layout_weight="3.5" />
 
                 <Button
                     android:id="@+id/buttonBackspace"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:layout_weight="1"
                     android:text="@string/backspace" />
             </TableRow>
 
@@ -69,23 +72,33 @@
                 android:layout_weight="1">
 
                 <Button
+                    android:id="@+id/buttonSquare"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/square" />
+
+                <Button
+                    android:id="@+id/buttonXpown"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/xpown" />
+
+                <Button
                     android:id="@+id/buttonClear"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/clear" />
 
                 <Button
                     android:id="@+id/buttonOpenB"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/openBracket" />
 
                 <Button
                     android:id="@+id/buttonCloseB"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/closeBracket" />
 
                 <Button
                     android:id="@+id/buttonDivide"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/divide" />
             </TableRow>
 
@@ -95,23 +108,33 @@
                 android:layout_weight="1">
 
                 <Button
+                    android:id="@+id/buttonSqrt"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/sqrt" />
+
+                <Button
+                    android:id="@+id/buttonTan"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/tan" />
+
+                <Button
                     android:id="@+id/button7"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num7" />
 
                 <Button
                     android:id="@+id/button8"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num8" />
 
                 <Button
                     android:id="@+id/button9"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num9" />
 
                 <Button
                     android:id="@+id/buttonMultiply"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/multiply" />
             </TableRow>
 
@@ -121,23 +144,33 @@
                 android:layout_weight="1">
 
                 <Button
+                    android:id="@+id/buttonSin"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/sin" />
+
+                <Button
+                    android:id="@+id/buttonCos"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/cos" />
+
+                <Button
                     android:id="@+id/button4"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num4" />
 
                 <Button
                     android:id="@+id/button5"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num5" />
 
                 <Button
                     android:id="@+id/button6"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num6" />
 
                 <Button
                     android:id="@+id/buttonMinus"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/minus" />
             </TableRow>
 
@@ -147,23 +180,33 @@
                 android:layout_weight="1">
 
                 <Button
+                    android:id="@+id/buttonLog"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/log" />
+
+                <Button
+                    android:id="@+id/buttonLn"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/naturalLog" />
+
+                <Button
                     android:id="@+id/button1"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num1" />
 
                 <Button
+                    style="@style/AppTheme.Button.Landscape"
                     android:id="@+id/button2"
-                    style="@style/AppTheme.Button"
                     android:text="@string/num2" />
 
                 <Button
                     android:id="@+id/button3"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num3" />
 
                 <Button
                     android:id="@+id/buttonPlus"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/plus" />
             </TableRow>
 
@@ -173,23 +216,33 @@
                 android:layout_weight="1">
 
                 <Button
+                    android:id="@+id/buttonE"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/e" />
+
+                <Button
+                    android:id="@+id/buttonPi"
+                    style="@style/AppTheme.Button.Landscape"
+                    android:text="@string/pi" />
+
+                <Button
                     android:id="@+id/buttonDot"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/dot" />
 
                 <Button
                     android:id="@+id/button0"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/num0" />
 
                 <Button
                     android:id="@+id/buttonSigned"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/signed" />
 
                 <Button
                     android:id="@+id/buttonEquals"
-                    style="@style/AppTheme.Button"
+                    style="@style/AppTheme.Button.Landscape"
                     android:text="@string/equals" />
             </TableRow>
 

@@ -1,12 +1,11 @@
 package com.barisgorgulu.calculist;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
-import com.fathzer.soft.javaluator.DoubleEvaluator;
 
 import java.util.Locale;
 
@@ -14,9 +13,8 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private TextView resultView, operationView;
-    private String text, result;
-    DoubleEvaluator evaluator = new DoubleEvaluator();
-
+    private String result, text;
+    ExtendedDoubleEvaluator evaluator = new ExtendedDoubleEvaluator();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.buttonSCI:
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                break;
+
+            case R.id.buttonSTD:
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                break;
+
             case R.id.button0:
                 operationView.append("0");
                 break;
@@ -75,14 +81,66 @@ public class MainActivity extends AppCompatActivity {
                 operationView.append(".");
                 break;
 
+            case R.id.buttonOpenB:
+                operationView.append("(");
+                break;
+
+            case R.id.buttonCloseB:
+                operationView.append(")");
+                break;
+
+            case R.id.buttonSquare:
+                operationClicked("^2");
+                break;
+
+            case R.id.buttonXpown:
+                operationClicked("^");
+                break;
+
+            case R.id.buttonSqrt:
+                operationView.append("sqrt(");
+                break;
+
+            case R.id.buttonTan:
+                operationView.append("tan(");
+                break;
+
+            case R.id.buttonSin:
+                operationView.append("sin(");
+                break;
+
+            case R.id.buttonCos:
+                operationView.append("cos(");
+                break;
+
+            case R.id.buttonLog:
+                operationView.append("log(");
+                break;
+
+            case R.id.buttonLn:
+                operationView.append("ln(");
+                break;
+
+            case R.id.buttonE:
+                operationView.append("e");
+                break;
+
+            case R.id.buttonPi:
+                operationView.append("pi");
+                break;
+
             case R.id.buttonClear:
-                clearScreen();
+                resultView.setText("");
+                operationView.setText("");
+                result = "";
                 break;
 
             case R.id.buttonBackspace:
-                text = operationView.getText().toString();
-                if (text.length() != 0) {
-                    if (text.endsWith("sin(") || text.endsWith("cos(") || text.endsWith("tan(")) {
+                if (operationView.length() != 0) {
+                    text = operationView.getText().toString();
+                    if (text.endsWith("ln(")) {
+                        operationView.setText(text.substring(0, text.length() - 3));
+                    } else if (text.endsWith("sin(") || text.endsWith("cos(") || text.endsWith("tan(") || text.endsWith("log(")) {
                         operationView.setText(text.substring(0, text.length() - 4));
                     } else if (text.endsWith("sqrt(")) {
                         operationView.setText(text.substring(0, text.length() - 5));
@@ -107,22 +165,6 @@ public class MainActivity extends AppCompatActivity {
                 operationClicked("*");
                 break;
 
-/*            case R.id.sqrt:
-                if(operationView.length()!=0)
-                {
-                    text=operationView.getText().toString();
-                    operationView.setText("sqrt(" + text + ")");
-                }
-                break;
-
-            case R.id.square:
-                if(operationView.length()!=0)
-                {
-                    text=operationView.getText().toString();
-                    operationView.setText("("+text+")^2");
-                }
-                break;*/
-
             case R.id.buttonSigned:
                 if (operationView.length() != 0) {
                     text = operationView.getText().toString();
@@ -130,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                     if (arr[0] == '-')
                         operationView.setText(text.substring(1, text.length()));
                     else
-                        operationView.setText("-" + text);
+                        operationView.append("-", 0, 1);
                 }
                 break;
 
@@ -152,16 +194,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void operationClicked(String op) {
         if (operationView.length() != 0) {
-            operationView.setText(operationView.getText() + op);
+            operationView.append(op);
         } else if (!result.equals("")) {
             operationView.setText(result + op);
         }
-    }
-
-    private void clearScreen() {
-        resultView.setText("");
-        operationView.setText("");
-        result = "";
     }
 
     private static String formatResult(double d) {
