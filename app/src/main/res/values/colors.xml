@@ -5,7 +5,8 @@
     <color name="colorAccent">#4dd0e1</color>
     <color name="materialTeal">#26a69a</color>
     <color name="materialBlack">#000000</color>
-    <color name="materialBlueGrey900">#263238</color>
-    <color name="materialGrey800">#424242</color>
-    <color name="materialGrey200">#eeeeee</color>
+    <color name="materialBlueGrey">#263238</color>
+    <color name="materialGrey">#424242</color>
+    <color name="materialWhite">#eeeeee</color>
+    <color name="pink">#ff80ab</color>
 </resources>

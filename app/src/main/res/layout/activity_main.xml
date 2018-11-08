@@ -6,17 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
-
-
-    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -28,16 +22,18 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
-            android:text="Calculation TODO"
-            android:gravity="end" />
+            android:textSize="32dp"
+            android:text=""
+            android:gravity="center|start" />
 
         <TextView
             android:id="@+id/tV_result"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
-            android:text="Result TODO"
-            android:gravity="end" />
+            android:textSize="32dp"
+            android:text=""
+            android:gravity="center|end" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -86,7 +82,7 @@
                 <Button
                     android:id="@+id/buttonPercent"
                     style="@style/AppTheme.Button"
-                    android:text="%" />
+                    android:text="@string/percent" />
 
                 <Button
                     android:id="@+id/buttonDivide"
@@ -101,8 +97,15 @@
 
                 <Button
                     android:id="@+id/button7"
-                    style="@style/AppTheme.Button"
-                    android:text="7" />
+                    android:theme="@style/AppTheme.Button"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:text="7"
+                    android:textSize="24dp"
+                    android:textColor="@color/materialWhite"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/button8"
@@ -117,7 +120,7 @@
                 <Button
                     android:id="@+id/buttonMultiply"
                     style="@style/AppTheme.Button"
-                    android:text="X" />
+                    android:text="@string/multiply" />
             </TableRow>
 
             <TableRow
@@ -173,9 +176,16 @@
                     android:text="1" />
 
                 <Button
-                    android:theme="@style/AppTheme.Button"
+                    android:theme="@style/BlueGreyAccent"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:id="@+id/button2"
-                    android:text="2" />
+                    android:text="2"
+                    android:textSize="24dp"
+                    android:textColor="@color/materialWhite"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/button3"
@@ -183,7 +193,6 @@
                     android:text="3" />
 
                 <Button
-                    android:background="@color/colorAccent"
                     android:id="@+id/buttonPlus"
                     style="@style/AppTheme.Button"
                     android:text="+" />

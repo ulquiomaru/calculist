@@ -7,8 +7,9 @@
     <string name="title_activity_standard_cal">StandardCal</string>
     <string name="title_activity_scientific_cal">ScientificCal</string>
     <string name="clear">C</string>
-    <string name="backspace">⌫</string>
+    <string name="backspace">\u232b</string>
     <string name="divide">÷</string>
+    <string name="multiply">×</string>
     <string name="sqrt">√</string>
     <string name="cuberoot">\u221B</string>
     <string name="square">x²</string>
@@ -29,7 +30,7 @@
     <string name="closeBracket">)</string>
     <string name="history">History</string>
 
-    <string name="title_activity_history">History</string>
+    <string name="invalidexp">Invalid Expression</string>
     <string name="deleteHistory">Delete History</string>
     <string name="mode1">Degree</string>
     <string name="mode2">Radian</string>
@@ -41,5 +42,6 @@
     <string name="log">log</string>
     <string name="Mod">%</string>
     <string name="inverse">1/x</string>
-    <string name="factorial" >x!</string>>
+    <string name="factorial">x!</string>
+    <string name="percent">%</string>>
 </resources>

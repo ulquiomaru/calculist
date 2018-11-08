@@ -9,13 +9,15 @@
         <!--<item name="buttonStyle">@style/AppTheme.Button</item>-->
     </style>
 
-    <style name="AppTheme.Button" parent="Base.Widget.AppCompat.Button.Borderless.Colored">
-        <item name="colorButtonNormal">@color/materialGrey200</item>
-        <item name="android:textColor">@color/materialGrey200</item>
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="colorButtonNormal">@color/materialWhite</item>
+        <item name="colorControlHighlight">@color/pink</item>
+        <item name="android:textColor">@color/materialWhite</item>
         <item name="android:layout_width">0px</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:onClick">onClick</item>
+        <item name="android:textSize">24dp</item>
     </style>
 
 </resources>
