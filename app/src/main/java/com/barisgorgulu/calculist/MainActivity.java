@@ -14,8 +14,6 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private TextView resultView, operationView;
-    //    private Double result = 0.0;
-    private int count = 0;
     private String text, result;
     DoubleEvaluator evaluator = new DoubleEvaluator();
 
@@ -34,47 +32,47 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button0:
-                operationView.setText(operationView.getText() + "0");
+                operationView.append("0");
                 break;
 
             case R.id.button1:
-                operationView.setText(operationView.getText() + "1");
+                operationView.append("1");
                 break;
 
             case R.id.button2:
-                operationView.setText(operationView.getText() + "2");
+                operationView.append("2");
                 break;
 
             case R.id.button3:
-                operationView.setText(operationView.getText() + "3");
+                operationView.append("3");
                 break;
 
             case R.id.button4:
-                operationView.setText(operationView.getText() + "4");
+                operationView.append("4");
                 break;
 
             case R.id.button5:
-                operationView.setText(operationView.getText() + "5");
+                operationView.append("5");
                 break;
 
             case R.id.button6:
-                operationView.setText(operationView.getText() + "6");
+                operationView.append("6");
                 break;
 
             case R.id.button7:
-                operationView.setText(operationView.getText() + "7");
+                operationView.append("7");
                 break;
 
             case R.id.button8:
-                operationView.setText(operationView.getText() + "8");
+                operationView.append("8");
                 break;
 
             case R.id.button9:
-                operationView.setText(operationView.getText() + "9");
+                operationView.append("9");
                 break;
 
             case R.id.buttonDot:
-                operationView.setText(operationView.getText() + ".");
+                operationView.append(".");
                 break;
 
             case R.id.buttonClear:
@@ -144,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                         resultView.setText(result);
                         operationView.setText("");
                     } catch (Exception e) {
-                        resultView.setText(R.string.invalidexp);
+                        resultView.setText(getString(R.string.invalidexp));
                         e.printStackTrace();
                     }
                 }

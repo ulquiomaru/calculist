@@ -75,14 +75,14 @@
                     android:text="@string/clear" />
 
                 <Button
-                    android:id="@+id/buttonParan"
+                    android:id="@+id/buttonOpenB"
                     style="@style/AppTheme.Button"
-                    android:text="( )" />
+                    android:text="@string/openBracket" />
 
                 <Button
-                    android:id="@+id/buttonPercent"
+                    android:id="@+id/buttonCloseB"
                     style="@style/AppTheme.Button"
-                    android:text="@string/percent" />
+                    android:text="@string/closeBracket" />
 
                 <Button
                     android:id="@+id/buttonDivide"
@@ -99,7 +99,7 @@
                     android:id="@+id/button7"
                     android:theme="@style/AppTheme.Button"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:text="7"
+                    android:text="@string/num7"
                     android:textSize="24dp"
                     android:textColor="@color/materialWhite"
                     android:layout_width="0dp"
@@ -110,12 +110,12 @@
                 <Button
                     android:id="@+id/button8"
                     style="@style/AppTheme.Button"
-                    android:text="8" />
+                    android:text="@string/num8" />
 
                 <Button
                     android:id="@+id/button9"
                     style="@style/AppTheme.Button"
-                    android:text="9" />
+                    android:text="@string/num9" />
 
                 <Button
                     android:id="@+id/buttonMultiply"
@@ -135,7 +135,7 @@
                     android:layout_marginTop="-1dp"
                     android:layout_marginRight="-1dp"
                     android:layout_marginBottom="-1dp"
-                    android:text="4" />
+                    android:text="@string/num4" />
 
                 <Button
                     android:id="@+id/button5"
@@ -144,7 +144,7 @@
                     android:layout_marginTop="-1dp"
                     android:layout_marginRight="-1dp"
                     android:layout_marginBottom="-1dp"
-                    android:text="5" />
+                    android:text="@string/num5" />
 
                 <Button
                     android:id="@+id/button6"
@@ -153,7 +153,7 @@
                     android:layout_marginTop="-1dp"
                     android:layout_marginRight="-1dp"
                     android:layout_marginBottom="-1dp"
-                    android:text="6" />
+                    android:text="@string/num6" />
 
                 <Button
                     android:id="@+id/buttonMinus"
@@ -162,7 +162,7 @@
                     android:layout_marginTop="-1dp"
                     android:layout_marginRight="-1dp"
                     android:layout_marginBottom="-1dp"
-                    android:text="-" />
+                    android:text="@string/minus" />
             </TableRow>
 
             <TableRow
@@ -173,13 +173,13 @@
                 <Button
                     android:id="@+id/button1"
                     style="@style/AppTheme.Button"
-                    android:text="1" />
+                    android:text="@string/num1" />
 
                 <Button
                     android:theme="@style/BlueGreyAccent"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:id="@+id/button2"
-                    android:text="2"
+                    android:text="@string/num2"
                     android:textSize="24dp"
                     android:textColor="@color/materialWhite"
                     android:layout_width="0dp"
@@ -190,12 +190,12 @@
                 <Button
                     android:id="@+id/button3"
                     style="@style/AppTheme.Button"
-                    android:text="3" />
+                    android:text="@string/num3" />
 
                 <Button
                     android:id="@+id/buttonPlus"
                     style="@style/AppTheme.Button"
-                    android:text="+" />
+                    android:text="@string/plus" />
             </TableRow>
 
             <TableRow
@@ -206,22 +206,22 @@
                 <Button
                     android:id="@+id/buttonDot"
                     style="@style/AppTheme.Button"
-                    android:text="." />
+                    android:text="@string/dot" />
 
                 <Button
                     android:id="@+id/button0"
                     style="@style/AppTheme.Button"
-                    android:text="0" />
+                    android:text="@string/num0" />
 
                 <Button
                     android:id="@+id/buttonSigned"
                     style="@style/AppTheme.Button"
-                    android:text="+/-" />
+                    android:text="@string/signed" />
 
                 <Button
                     android:id="@+id/buttonEquals"
                     style="@style/AppTheme.Button"
-                    android:text="=" />
+                    android:text="@string/equals" />
             </TableRow>
 
         </TableLayout>

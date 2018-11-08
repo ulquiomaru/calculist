@@ -2,10 +2,7 @@
     <string name="app_name">Calculist</string>
     <string name="stdCal">Standard Calculator</string>
     <string name="sciCal">Scientific Calculator</string>
-    <string name="unitCal">Unit Converter</string>
     <string name="FullCal">Calculator App</string>
-    <string name="title_activity_standard_cal">StandardCal</string>
-    <string name="title_activity_scientific_cal">ScientificCal</string>
     <string name="clear">C</string>
     <string name="backspace">\u232b</string>
     <string name="divide">÷</string>
@@ -31,7 +28,6 @@
     <string name="history">History</string>
 
     <string name="invalidexp">Invalid Expression</string>
-    <string name="deleteHistory">Delete History</string>
     <string name="mode1">Degree</string>
     <string name="mode2">Radian</string>
     <string name="toggle">SWITCH</string>
@@ -43,5 +39,20 @@
     <string name="Mod">%</string>
     <string name="inverse">1/x</string>
     <string name="factorial">x!</string>
-    <string name="percent">%</string>>
+    <string name="percent">%</string>
+    <string name="num0">0</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+    <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    <string name="num9">9</string>
+    <string name="plus">+</string>
+    <string name="dot">.</string>
+    <string name="signed">+/-</string>
+    <string name="equals">=</string>
+    <string name="minus">-</string>>
 </resources>
