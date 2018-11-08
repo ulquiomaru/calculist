@@ -2,8 +2,8 @@ package com.barisgorgulu.calculist;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -24,16 +24,20 @@ public class MainActivity extends AppCompatActivity {
         operationView = findViewById(R.id.tV_operation);
         resultView = findViewById(R.id.tV_result);
 
-        Log.d("MainActivity", "Calculator Initialized.");
+        clearScreen();
+
+        // Log.d("MainActivity", "Calculator Initialized.");
     }
 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonSCI:
+                clearScreen();
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                 break;
 
             case R.id.buttonSTD:
+                clearScreen();
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 break;
 
@@ -130,9 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.buttonClear:
-                resultView.setText("");
-                operationView.setText("");
-                result = "";
+                clearScreen();
                 break;
 
             case R.id.buttonBackspace:
@@ -182,9 +184,11 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         result = formatResult(evaluator.evaluate(text));
                         resultView.setText(result);
+                        resultView.setTextColor(ContextCompat.getColor(this, R.color.materialGreen));
                         operationView.setText("");
                     } catch (Exception e) {
                         resultView.setText(getString(R.string.invalidexp));
+                        resultView.setTextColor(ContextCompat.getColor(this, R.color.materialRed));
                         e.printStackTrace();
                     }
                 }
@@ -198,6 +202,13 @@ public class MainActivity extends AppCompatActivity {
         } else if (!result.equals("")) {
             operationView.setText(result + op);
         }
+    }
+
+    private void clearScreen() {
+        resultView.setText("");
+        operationView.setText("");
+        result = "";
+        text = "";
     }
 
     private static String formatResult(double d) {

@@ -8,5 +8,6 @@
     <color name="materialBlueGrey">#263238</color>
     <color name="materialGrey">#424242</color>
     <color name="materialWhite">#eeeeee</color>
-    <color name="pink">#ff80ab</color>
+    <color name="materialGreen">#69f0ae</color>
+    <color name="materialRed">#e57373</color>
 </resources>
